@@ -32,7 +32,14 @@ def calculateProfit(ali_budget, bashir_budget):
         B=(bashir_budget*(1.5)) - bashir_budget
         
     if A > B:
-        return (int(A))
+        test=A % 1.0
+        if test>= 0.5:
+            A=int(A)+1
+        return A
     else:
-        return (int(B))       
+        test=B % 1.0
+        if test>= 0.5:
+            B=int(B)+1
+        return B
+
 #### End OF MARKER
